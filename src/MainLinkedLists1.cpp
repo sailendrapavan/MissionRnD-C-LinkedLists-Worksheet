@@ -44,8 +44,9 @@ void display1(lptr first)
 int main(){
 	s= numberToLinkedList(82539);
 	k = sortLinkedList(s);
+	display1(k);
 	m = removeEveryKthNode(k,2);
-	//display1(m);
+	display1(m);
 
 	
 	//Test 012SortSll

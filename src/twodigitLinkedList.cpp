@@ -20,7 +20,21 @@ struct node {
 	int digit2;
 	struct node *next;
 };
-
+typedef struct node *lptr;
 int convert_sll_2digit_to_int(struct node *head){
-	return 0;
+	lptr h = head;
+	int c=0,temp1,temp2,final=0;
+	if (head == NULL)
+	{
+		return NULL;
+	}
+	while (h != NULL)
+	{
+		temp1 = h->digit1;
+		temp2 = h->digit2;
+		final = final * 100 + (h->digit1) * 10 + h->digit2;
+		h = h->next;
+	}
+	
+	return final;
 }

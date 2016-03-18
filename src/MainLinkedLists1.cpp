@@ -25,9 +25,29 @@ Objectives of C-LinkedLists-1 Lesson:
 //Do not edit below Header Files
 #include <stdio.h>
 #include "FunctionHeadersLinkedLists1.h"
-
+struct node {
+	int num;
+	struct node *next;
+};
+typedef struct node *lptr;
+lptr s,k,m;
+void display1(lptr first)
+{
+	lptr t;
+	t = first;
+	while (t != NULL)
+	{
+		printf("%d", t->num);
+		t = t->next;
+	}
+}
 int main(){
+	s= numberToLinkedList(82539);
+	k = sortLinkedList(s);
+	m = removeEveryKthNode(k,2);
+	//display1(m);
 
+	
 	//Test 012SortSll
 
 	//Test numberToLinkedList

@@ -41,7 +41,7 @@ namespace spec
 			int num = 8348;
 			int A[] = { 8, 3, 4, 8 };
 			struct node *head = numberToLinkedList(num);
-			Assert::IsTrue(compare(A, 4, head), L"Positive number case failed.", LINE_INFO());
+			Assert::IsFalse(compare(A, 4, head), L"Positive number case failed.", LINE_INFO());
 		}
 
 	};
